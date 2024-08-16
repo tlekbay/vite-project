@@ -1,14 +1,24 @@
 {
-    "posts": [
-      { "id": 1, "title": "Post 1" },
-      { "id": 2, "title": "Post 2" },
-      { "id": 3, "title": "Post 3" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 },
-      { "id": 2, "body": "some comment", "postId": 1 }
-    ],
-    "profile": {
-      "name": "typicode"
+  "users": [
+    {
+      "id": "b50203c0-dd0a-46ef-b433-73f5d3d1de74",
+      "name": "Balzhan",
+      "surname": "Urtakova",
+      "mail": "balzhanurtakova@gmail.com",
+      "skills": [],
+      "registration_date": "8/16/2024 21:37:08"
+    },
+    {
+      "id": "aa011c0f-2d38-4c30-97f7-93e46cd6506e",
+      "name": "Tlekbay",
+      "surname": "Uteshev",
+      "mail": "tlekbayuteshev@gmail.com",
+      "skills": [
+        {
+          "skill": ".NET"
+        }
+      ],
+      "registration_date": "8/17/2024 01:30:05"
     }
-  }
+  ]
+}
