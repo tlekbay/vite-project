@@ -12,3 +12,4 @@ export interface UserState {
   data: User[];
   error: string | null;
 }
+

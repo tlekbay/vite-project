@@ -11,7 +11,7 @@ import { fetchUsers, deleteUser } from '../store/userSlicer';
 const Home: React.FC = () => {
   
   const dispatch: AppDispatch = useDispatch<AppDispatch>();
-  const { data, isLoading, error } = useSelector((state: RootState) => state.user);
+  const { data, isLoading, error} = useSelector((state: RootState) => state.user);
   const navigate = useNavigate();
 
   useEffect(() => {

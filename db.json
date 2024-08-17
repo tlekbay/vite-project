@@ -1,14 +1,6 @@
 {
   "users": [
     {
-      "id": "b50203c0-dd0a-46ef-b433-73f5d3d1de74",
-      "name": "Balzhan",
-      "surname": "Urtakova",
-      "mail": "balzhanurtakova@gmail.com",
-      "skills": [],
-      "registration_date": "8/16/2024 21:37:08"
-    },
-    {
       "id": "aa011c0f-2d38-4c30-97f7-93e46cd6506e",
       "name": "Tlekbay",
       "surname": "Uteshev",

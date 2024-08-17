@@ -2,11 +2,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { User, UserState } from './types';
 import axios from 'axios';
 
+const URL = "/api/users";
+
+
 export const fetchUsers = createAsyncThunk<User[], void, { rejectValue: string }>(
   'users/fetchUsers',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`http://localhost:4000/users`);
+      const response = await axios.get(URL);
       return response.data;
     } catch (error) {
       return rejectWithValue('Failed to fetch users');
@@ -18,7 +21,7 @@ export const postUser = createAsyncThunk<User, User, { rejectValue: string }>(
   'users/postUser',
   async (user: User, { rejectWithValue }) => {
     try {
-      await axios.post('http://localhost:4000/users', user);
+      await axios.post(URL, user);
       return user;
     } catch (error) {
       return rejectWithValue('Failed to post user');
@@ -30,7 +33,7 @@ export const updateUser = createAsyncThunk<User, User, { rejectValue: string }>(
   'users/putUser',
   async (user: User, { rejectWithValue }) => {
     try {
-      await axios.put(`http://localhost:4000/users/${user.id}`, user);
+      await axios.put(URL + "/" + user.id, user);
       return user;
     } catch (error) {
       return rejectWithValue('Failed to put user');
@@ -39,7 +42,7 @@ export const updateUser = createAsyncThunk<User, User, { rejectValue: string }>(
 );
 
 export const deleteUser = createAsyncThunk('users/deleteUser', async (id: string) => {
-  await axios.delete(`http://localhost:4000/users/${id}`)
+  await axios.delete(URL + "/" + id)
   return id;
 });
 
